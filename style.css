@@ -1,0 +1,57 @@
+/* Readex Pro && Cormorant Unicase
+    Fonts and custom properties*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Readex+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+    --main-bg-color: #CAD2C5;
+    --secondary-bg-color: #52796F;
+    --light-color: #84A98C;
+    --dark-color: #2F3E46;
+    --l-dark-color: #354F52;
+}
+
+/* 
+#CAD2C5
+#84A98C
+#52796F
+#354F52
+#2F3E46 
+https://coolors.co/cad2c5-84a98c-52796f-354f52-2f3e46
+*/
+
+/* General Styling and properties */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Readex Pro", "Cormorant Unicase";
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Specific Styling */
+
+#header {
+    height: 130px;
+}
+
+#header .title {
+    height: 100%;
+    width: 100%;
+    background-color: var(--dark-color);
+    color: var(--main-bg-color);
+}
+
+#header .title .epicTitlePart {
+    font-family: "Cormorant Unicase";
+}
