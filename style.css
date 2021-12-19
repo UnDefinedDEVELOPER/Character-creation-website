@@ -31,18 +31,24 @@ body {
     font-family: "Readex Pro", "Cormorant Unicase";
     font-size: 16px;
     font-weight: 300;
+    position: relative;
 }
 
 .flex {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
 
 /* Specific Styling */
 
 #header {
-    height: 130px;
+    height: 10vh;
 }
 
 #header .title {
@@ -52,6 +58,43 @@ body {
     color: var(--main-bg-color);
 }
 
+#header .title.flex {
+    justify-content: center;
+    align-items: center;
+}
+
 #header .title .epicTitlePart {
     font-family: "Cormorant Unicase";
+}
+
+/* Main Window */
+#mainWindow {
+    position: absolute;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+}
+
+#mainWindow #options,
+#mainWindow #view {
+    width: 50%;
+    height: 100%;
+}
+
+#mainWindow #options {
+    background-color: var(--main-bg-color);
+    color: var(--dark-color);
+    font-family: "Cormorant Unicase";
+    font-weight: bolder;
+}
+
+#mainWindow #view {
+    background-image: url("./img/viewBackground.jpeg");
+    background-position-y: center;
+    background-position-x: 55%;
+    background-size: cover;
+}
+
+#mainWindow #options > * {
+    padding: 1rem;
 }
