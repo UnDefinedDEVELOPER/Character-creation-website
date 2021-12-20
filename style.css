@@ -36,13 +36,26 @@ body {
 
 .flex {
     display: flex;
-    flex-direction: row;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+}
+
+.card {
+    background-color: rgba(132, 169, 140, 0.2);
+    border-radius: 15px;
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.4);
+    transition: all .2s ease-in-out;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: rgba(132, 169, 140, 0.6);
+    transform: scale(1.1);
 }
 
 /* Specific Styling */
@@ -86,15 +99,34 @@ body {
     color: var(--dark-color);
     font-family: "Cormorant Unicase";
     font-weight: bolder;
+    font-size: 1.5rem;
 }
 
-#mainWindow #view {
-    background-image: url("./img/viewBackground.jpeg");
-    background-position-y: center;
-    background-position-x: 55%;
-    background-size: cover;
+#mainWindow #options > .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+#mainWindow #options .optionBar.grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#mainWindow #options .optionBar .card img {
+    width: 100%;
+    height: auto;
 }
 
 #mainWindow #options > * {
     padding: 1rem;
 }
+
+
+#mainWindow #view {
+    background-image: url("./img/4ad62269000171.5b717626ae673.jpg");
+    background-position-y: center;
+    /* background-position-x: 55%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
