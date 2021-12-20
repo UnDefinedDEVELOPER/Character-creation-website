@@ -50,6 +50,7 @@ body {
     display: flex;
     justify-items: center;
     align-items: center;
+    user-select: none;
 }
 
 .card:hover {
@@ -86,6 +87,7 @@ body {
     top: 10vh;
     height: 90vh;
     width: 100%;
+    user-select: none;
 }
 
 #mainWindow #options,
@@ -123,10 +125,64 @@ body {
 
 
 #mainWindow #view {
-    background-image: url("./img/4ad62269000171.5b717626ae673.jpg");
+    background-image: url("./img/viewBackground.jpeg");
     background-position-y: center;
-    /* background-position-x: 55%; */
+    background-position-x: 55%;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 0rem 0;
 }
 
+#mainWindow #view.grid {
+    grid-template-rows: 3rem repeat(3,1fr) 3rem;
+}
+
+/* Heads */
+
+.royalHead {
+    background-image: url("./img/royal\ head-01.png");
+}
+
+.dripHead {
+    background-image: url("./img/drip\ head-01.png");
+}
+
+.ratniHead {
+    background-image: url("./img/ratni\ head-01.png");
+}
+
+/* Torsos */
+
+.royalTorso {
+    background-image: url("./img/royal\ torso-01.png");
+}
+
+.dripTorso {
+    background-image: url("./img/drip\ torso-01.png");
+}
+
+.ratniTorso {
+    background-image: url("./img/ratni\ torso-01.png");
+}
+
+/* Legs */
+
+.royalLegs {
+    background-image: url("./img/royal\ legs-01.png");
+}
+
+.dripLegs {
+    background-image: url("./img/drip\ legs-01.png");
+}
+
+.ratniLegs {
+    background-image: url("./img/ratni\ legs-01.png");
+}
+
+#mainWindow #view #headView,
+#mainWindow #view #torsoView,
+#mainWindow #view #legsView {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
